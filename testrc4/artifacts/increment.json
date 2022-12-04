@@ -1,0 +1,97 @@
+{
+  "source": {
+    "hash": "0x8851f5333f7fa4d16753c11a4200dd9a63f7c9f429ccf04cb0d90ea3bbb95fb5",
+    "language": "ink! 3.4.0",
+    "compiler": "rustc 1.67.0-nightly"
+  },
+  "contract": {
+    "name": "increment",
+    "version": "0.1.0",
+    "authors": [
+      "shin.takahashi"
+    ]
+  },
+  "V3": {
+    "spec": {
+      "constructors": [
+        {
+          "args": [],
+          "docs": [
+            "Constructor that initializes the `bool` value to the given `init_value`."
+          ],
+          "label": "new",
+          "payable": false,
+          "selector": "0x9bae9d5e"
+        }
+      ],
+      "docs": [],
+      "events": [],
+      "messages": [
+        {
+          "args": [
+            {
+              "label": "value",
+              "type": {
+                "displayName": [
+                  "u8"
+                ],
+                "type": 0
+              }
+            }
+          ],
+          "docs": [
+            " A message that can be called on instantiated contracts.",
+            " This one flips the value of the stored `bool` from `true`",
+            " to `false` and vice versa."
+          ],
+          "label": "inc",
+          "mutates": true,
+          "payable": false,
+          "returnType": null,
+          "selector": "0x1d32619f"
+        },
+        {
+          "args": [],
+          "docs": [
+            " Simply returns the current value of our `bool`."
+          ],
+          "label": "get",
+          "mutates": false,
+          "payable": false,
+          "returnType": {
+            "displayName": [
+              "u8"
+            ],
+            "type": 0
+          },
+          "selector": "0x2f865bd9"
+        }
+      ]
+    },
+    "storage": {
+      "struct": {
+        "fields": [
+          {
+            "layout": {
+              "cell": {
+                "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "ty": 0
+              }
+            },
+            "name": "value"
+          }
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": 0,
+        "type": {
+          "def": {
+            "primitive": "u8"
+          }
+        }
+      }
+    ]
+  }
+}
